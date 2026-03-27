@@ -6,7 +6,7 @@
  */
 -->
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <widget id="bina_popup" class="Bina\Popup\Block\Widget\Popup">
+    <widget id="d3p1_popup" class="D3p1\Popup\Block\Widget\Popup">
         <label>Popup</label>
         <description translate="true"><![CDATA[Add a popup to your site]]></description>
         <parameters>

@@ -3,7 +3,7 @@
  * @description Popup widget block
  * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
-namespace Bina\Popup\Block\Widget;
+namespace D3p1\Popup\Block\Widget;
 
 use Magento\Widget\Block\BlockInterface;
 use Magento\Cms\Block\Widget\Block;
@@ -13,7 +13,7 @@ class Popup extends Block implements BlockInterface
     /**
      * @var string
      */
-    protected $_template = 'Bina_Popup::widget/popup.phtml';
+    protected $_template = 'D3p1_Popup::widget/popup.phtml';
 
     /**
      * Get title
