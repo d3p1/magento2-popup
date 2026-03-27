@@ -1,106 +1,47 @@
 <?php
 /**
- *
  * @description Popup template
- *
- * @author Bina Commerce      <https://www.binacommerce.com>
- * @author C. M. de Picciotto <cmdepicciotto@binacommerce.com>
- *
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
 ?>
 
 <?php
 /**
- *
  * @var \Bina\Popup\Block\Widget\Popup $block
- *
  */
 ?>
 
-<?php
-/**
- *
- * @note Check if popup is shown on page initialization
- *
- */
-?>
 <?php if (!$block->getShowOnInit()): ?>
     <?php
     /**
-     *
      * @note Init button
-     * @note If popup is not show on page initialization then it is necessary to create a button to be able to show the popup on its click event
-     *
+     * @note If popup is not show on page initialization then it is necessary
+     *       to create a button to be able to show the popup on its click event
      */
     ?>
     <a id="<?= $block->getButtonId() ?>" class="button popup-button action primary" href="#">
-        <?php
-        /**
-         *
-         * @note Init button title
-         *
-         */
-        ?>
         <span><?= $block->getButtonTitle() ?></span>
     </a>
 <?php endif; ?>
 
-<?php
-/**
- *
- * @note Popup widget container
- *
- */
-?>
 <div class="popup-widget-container" id="<?= $block->getElementId() ?>">
-    <?php
-    /**
-     *
-     * @note Init popup content container
-     *
-     */
-    ?>
     <div class="popup-content">
-        <?php
-        /**
-         *
-         * @note Init popup content
-         *
-         */
-        ?>
         <?= $block->getContentHtml() ?>
     </div>
 </div>
 
-<?php
-/**
- *
- * @note Init popup JS
- *
- */
-?>
 <script type="text/javascript">
 // <![CDATA[
 require(['jquery', 'Magento_Ui/js/modal/modal'], function($, modal) {
     <?php
     /**
-     *
      * Init popup
      *
      * @returns {void}
-     *
      * @private
-     *
      */
     ?>
     function _initPopup() {
-        <?php
-        /**
-         *
-         * @note Init options
-         *
-         */
-        ?>
         var options = {
             type      : 'popup',
             responsive: true,
@@ -109,57 +50,15 @@ require(['jquery', 'Magento_Ui/js/modal/modal'], function($, modal) {
             buttons   : []
         };
 
-        <?php
-        /**
-         *
-         * @note Init popup
-         *
-         */
-        ?>
         modal(options, $('#<?= $block->getElementId() ?>'));
     }
 
-    <?php
-    /**
-     *
-     * @note Check document ready
-     *
-     */
-    ?>
     $(document).ready(function() {
-        <?php
-        /**
-         *
-         * @note Init popup
-         *
-         */
-        ?>
         _initPopup();
 
-        <?php
-        /**
-         *
-         * @note Check if popup is shown on page initialization
-         *
-         */
-        ?>
         <?php if ($block->getShowOnInit()): ?>
-            <?php
-            /**
-             *
-             * @note If popup is shown on page initialization, show popup
-             *
-             */
-            ?>
             $('#<?= $block->getElementId() ?>').modal('openModal');
         <?php else: ?>
-            <?php
-            /**
-             *
-             * @note If popup is not show on page initialization then show popup on button click
-             *
-             */
-            ?>
             $('#<?= $block->getButtonId() ?>').click(function() {
                 $('#<?= $block->getElementId() ?>').modal('openModal');
             });

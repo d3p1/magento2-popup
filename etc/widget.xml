@@ -1,45 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
 /**
- *
  * @description Widget configuration
- *
- * @author Bina Commerce      <https://www.binacommerce.com>
- * @author C. M. de Picciotto <cmdepicciotto@binacommerce.com>
- *
+ * @author      C. M. de Picciotto <d3p1@d3p1.dev> (https://d3p1.dev/)
  */
 -->
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
-    <!--
-    /**
-     *
-     * @note Popup widget
-     *
-     */
-    -->
     <widget id="bina_popup" class="Bina\Popup\Block\Widget\Popup">
         <label>Popup</label>
         <description translate="true"><![CDATA[Add a popup to your site]]></description>
         <parameters>
-            <!--
-            /**
-             *
-             * @note Popup title
-             *
-             */
-            -->
             <parameter name="title" xsi:type="text" required="true" visible="true">
                 <label translate="true">Title</label>
                 <description translate="true"><![CDATA[Popup title]]></description>
             </parameter>
 
-            <!--
-            /**
-             *
-             * @note Popup block ID to use as popup content
-             *
-             */
-            -->
             <parameter name="block_id" xsi:type="block" required="true" visible="true">
                 <label translate="true">Block</label>
                 <description translate="true"><![CDATA[Block to use as popup content]]></description>
@@ -52,37 +27,16 @@
                 </block>
             </parameter>
 
-            <!--
-            /**
-             *
-             * @note Popup title
-             *
-             */
-            -->
             <parameter name="css_class" xsi:type="text" required="false" visible="true">
                 <label translate="true">CSS Class</label>
                 <description translate="true"><![CDATA[CSS class useful for styling the popup]]></description>
             </parameter>
 
-            <!--
-            /**
-             *
-             * @note Show popup on page initialization (if the popup is not shown on page initialization then it is shown on button click)
-             *
-             */
-            -->
             <parameter name="show_on_init" xsi:type="select" required="true" visible="true" source_model="Magento\Config\Model\Config\Source\Yesno">
                 <label translate="true">Show On Init</label>
                 <description translate="true"><![CDATA[Show popup on page initialization]]></description>
             </parameter>
 
-            <!--
-            /**
-             *
-             * @note Button title
-             *
-             */
-            -->
             <parameter name="button_title" xsi:type="text" visible="true">
                 <label translate="true">Button Title</label>
                 <description translate="true"><![CDATA[Popup button title]]></description>
