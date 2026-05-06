@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/d3p1/magento2-popup/compare/v1.0.1...v1.0.2) (2026-05-06)
+
+
+### Bug Fixes
+
+* improve code style [[#1](https://github.com/d3p1/magento2-popup/issues/1)] ([453b4de](https://github.com/d3p1/magento2-popup/commit/453b4de90259a2a859247528a87bd57bfd2c5d79))
+
 ## [1.0.1](https://github.com/d3p1/magento2-popup/compare/v1.0.0...v1.0.1) (2026-05-05)
 
 
